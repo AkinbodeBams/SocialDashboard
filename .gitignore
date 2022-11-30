@@ -1,2 +1,7 @@
 /.env
 /.vscode
+*.log
+*.pot
+*.pyc
+__pycache__/
+
