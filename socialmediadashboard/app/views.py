@@ -70,7 +70,7 @@ class SocialMediaDashBoardProfile(APIView):
             caller = []
             for i in keywords:
 
-                if i not in distinct_rows or ((datetime.now(timezone.utc)) - (SocialDashboardData.objects.filter(keyword=i).last().modified_at)) > timedelta(minutes=6):
+                if i not in distinct_rows or ((datetime.now(timezone.utc)) - (SocialDashboardData.objects.filter(keyword=i).last().modified_at)) > timedelta(hours=12):
                     caller.append(i)
             if len(caller) > 0:
 
