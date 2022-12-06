@@ -9,7 +9,7 @@ class SocialDashboardData(models.Model):
     date_posted= models.DateTimeField(null=True)
     text_content=models.CharField(max_length=2000, null=True)
     media_content=models.CharField(max_length=2000, null=True)
-    language =models.CharField(max_length=2000, null=True)
+    language =models.CharField(max_length=2000, default='others',null=True)
     sentiment =models.CharField(max_length=2000, null=True)
     post_url =models.URLField(max_length=2000,null=True)
     profile_name =models.CharField(max_length=2000, null=True)

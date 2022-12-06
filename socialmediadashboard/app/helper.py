@@ -110,6 +110,17 @@ class SocialDashboardHelper:
         else:
             return None
 
+    def get_language(self,obj):
+        if obj is not None:
+            if (len(obj) < 2) or (len(obj) > 2) or obj == '' or obj == "null":
+                return 'others'
+            else:
+                return obj
+            
+        else:
+            return obj
+
+
     def format_date(self, obj):
 
         if obj is not None:
@@ -130,7 +141,7 @@ class SocialDashboardHelper:
                                   "postid": obj['postid'],
                                   "text_content": obj['text'],
                                   "media_content": obj.get('image', None),
-                                  "language": obj.get('lang', None),
+                                  "language": self.get_language(obj.get('lang', None)),
                                   "sentiment": obj['sentiment'],
                                   "post_url": obj['url'],
                                   "profile_name":  obj.get('user', None).get('name', None) if obj.get('user', None).get('name', None) else None,
