@@ -35,7 +35,7 @@ class SocialMediaDashBoardProfile(APIView):
         to_date = request.query_params.get('to_date', None)
         all_params = ['network', 'language', 'sentiment',
                       'from_date', 'to_date', 'keyword']
-        all_keywords = SocialDashboardData.objects.all()
+        all_keywords = SocialDashboardData.objects.all() 
         filtering = SocialDashboardData.objects.filter(
             keyword__in=[i for i in keywords])
         distinct_rows = SocialDashboardData.objects.all(
