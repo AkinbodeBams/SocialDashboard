@@ -44,9 +44,7 @@ class SocialDashboardHelper:
 
     def instagram_data(self, id):
         headers = {
-            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 \
-               (KHTML, like Gecko) Mobile/15E148 Instagram 244.0.0.12.112 (iPhone12,1; iOS 15_5; en_US; en-US; scale=2.00;\
-                828x1792; 383361019)',
+            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 244.0.0.12.112 (iPhone12,1; iOS 15_5; en_US; en-US; scale=2.00;828x1792; 383361019)',
         }
         url = f'https://i.instagram.com/api/v1/users/{id}/info/'
         try:
